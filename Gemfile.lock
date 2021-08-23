@@ -1,0 +1,29 @@
+PATH
+  remote: .
+  specs:
+    smart_parser (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    builder (3.2.4)
+    ci_reporter (2.0.0)
+      builder (>= 2.1.2)
+    ci_reporter_minitest (1.0.0)
+      ci_reporter (~> 2.0)
+      minitest (~> 5.0)
+    minitest (5.10.3)
+    rake (10.5.0)
+
+PLATFORMS
+  x86_64-darwin-19
+
+DEPENDENCIES
+  bundler (~> 2.2.26)
+  ci_reporter_minitest (~> 1.0.0)
+  minitest (~> 5.10.3)
+  rake (~> 10.0)
+  smart_parser!
+
+BUNDLED WITH
+   2.2.26
