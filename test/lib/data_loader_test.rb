@@ -16,6 +16,11 @@ class DataLoaderTest < Minitest::Test
     assert_equal('Filename is not set for data load!', exception.message)
   end
 
+  def test_file_not_exist
+    exception = assert_raises(RuntimeError) {SmartParser::DataLoader.new('test.txt').data_lines}
+    assert_equal('File does not exist', exception.message)
+  end
+
   def test_datalines
     data_lines = @data_loader.data_lines
 

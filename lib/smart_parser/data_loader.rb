@@ -8,6 +8,10 @@ module SmartParser
     end
 
     def data_lines
+      raise 'File does not exist' unless File.file?(@filename)
+      raise 'File is empty' if File.zero?(@filename)
+      raise 'File has wrong format. Please, use text file.' if File.binary?(@filename)
+
       @data_lines ||= File.readlines(@filename).map{|line| line.split(' ') }
     end
   end

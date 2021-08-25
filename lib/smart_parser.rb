@@ -1,6 +1,7 @@
 require "smart_parser/version"
 require "smart_parser/data_loader"
 require "smart_parser/page"
+require 'ptools'
 
 module SmartParser
   class Error < StandardError; end
