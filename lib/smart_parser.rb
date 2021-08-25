@@ -16,6 +16,7 @@ module SmartParser
 
     def perform
       grab_pages
+      puts "Report:"
       views_report_for(@pages.sort_by{|page| page.views}.reverse)
       unique_visits_report_for(@pages.sort_by{|page| page.unique_visits}.reverse)
 
